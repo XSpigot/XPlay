@@ -1,0 +1,14 @@
+#Errors Section
+errors:
+  #No Permission Message
+  permission: "&4&lNo Permission"
+  #Only Players Message
+  consolerestrict: "&4&lOnly Players Can Execute This Command"
+#Configuration Section
+configs:
+#Reload Config Message
+  reload: "&4&lReloaded Config"
+#Hub/Lobby Section
+hub:
+#Lobby Message
+  lobby: "&4&lSuccessfully Set The Lobby"
