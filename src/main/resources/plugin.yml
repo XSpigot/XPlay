@@ -1,0 +1,34 @@
+name: XPlay
+version: ${project.version}
+main: com.github.xspigot.XPlay
+api-version: 1.16
+authors: [EpicGamer73]
+description: The All-In-One Minecraft Plugin
+depend: [Vault]
+softdepend: [PlaceholderAPI, WorldEdit, ProtocolLib, ViaVersion, PlotSquared]
+website: https://xspigotmc.gitbook.io/
+commands:
+  xplay:
+    description: "Main XPlay Command {xplay.main}"
+    default: op
+  xdev:
+    description: "Alternative Main XPlay Command {xplay.main}"
+    default: op
+  xgui:
+    description: "Alternative Main XPlay Command {xplay.main}"
+    default: op
+  xvault:
+    description: "Alternative Main XPlay Command {xplay.main}"
+    default: op
+  xhelp:
+    description: "Alternative Main XPlay Command {xplay.main}"
+    default: op
+  xreload:
+    description: "Alternative Main XPlay Command {xplay.main}"
+    default: op
+  setlobby:
+    description: "Set Lobby {xplay.lobby}"
+    default: op
+  lobby:
+    description: "Teleport To Lobby {no permission}"
+    default: true
