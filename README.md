@@ -29,10 +29,10 @@ I Am A Developer. Where Is The Source Code?
 
 GitHub
 
-Who Are The Contributors?
-
-EpicGamer73, wsman217
-
 I Need To See All The Features. Where Is The Wiki?
 
 https://xspigotmc.gitbook.io/xplay/
+
+Contributors:
+EPICGAMER73
+WSMAN217
