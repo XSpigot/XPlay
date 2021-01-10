@@ -6,7 +6,7 @@
 
     <groupId>com.github.xspigot</groupId>
     <artifactId>XPlay</artifactId>
-    <version>Int21R2</version>
+    <version>Int21R3</version>
     <packaging>jar</packaging>
 
     <name>XPlay</name>
