@@ -13,4 +13,5 @@ public class Utils {
             return ChatColor.RED + "Config Message \"" + location + "\" Not Found.";
         return ChatColor.translateAlternateColorCodes('&', value);
     }
+
 }

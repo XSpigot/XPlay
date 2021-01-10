@@ -11,7 +11,7 @@ XPlay Is The All-In-One Minecraft Plugin Which Includes Many Features Such As A 
 
 How Do I Install XPlay?
 
-XPlay Is Fairly Easy To Install. All You Need To Do Is To Download The File From The Button Above, Put It Into The Plugins Folder, And Launch! Currently, You Also Need To Install Vault For The Plugin To Work Too. Placeholder API Is An Optional Plugin You Can Install For More Flexibility. In The Future, Vault Will Also Be An Optional Plugin, Too.
+XPlay Is Fairly Easy To Install. All You Need To Do Is To Download The File From The Button Above, Put It Into The Plugins Folder, And Launch! Currently, You Also Need To Install Vault For The Plugin To Work Too. There Are Other Optional Plugins You Can Install For More Flexibility. In The Future, Vault Will Also Be An Optional Plugin, Too.
 
 I Need Help. Where Do I Get Support?
 

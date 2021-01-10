@@ -8,6 +8,10 @@ errors:
 configs:
 #Reload Config Message
   reload: "&4&lReloaded Config"
+#Tools Section
+tools:
+#Developer Mode
+  dev: false
 #Hub/Lobby Section
 hub:
 #Lobby Message
