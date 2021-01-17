@@ -39,7 +39,7 @@ public final class XPlay extends JavaPlugin implements Listener {
         getLogger().log(Level.INFO, "Soft Dependencies: " + getDescription().getSoftDepend());
         getLogger().log(Level.INFO, "API Version: " + getDescription().getAPIVersion());
 
-        developer = getConfig().getBoolean("tools.dev");
+        developer = Utils.getValueFromConfig("tools.dev");
 
         if (developer) {
             getLogger().log(Level.WARNING, "Running Snapshot [DEV RELEASE]");

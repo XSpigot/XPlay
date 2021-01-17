@@ -14,4 +14,9 @@ public class Utils {
         return ChatColor.translateAlternateColorCodes('&', value);
     }
 
+    public static Boolean getValueFromConfig(String location) {
+        Boolean value = config.getBoolean(location);
+        return value;
+    }
+
 }

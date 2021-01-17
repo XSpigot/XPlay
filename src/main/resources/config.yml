@@ -11,7 +11,7 @@ configs:
 #Tools Section
 tools:
 #Developer Mode
-  dev: false
+  dev: true
 #Hub/Lobby Section
 hub:
 #Lobby Message
