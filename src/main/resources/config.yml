@@ -11,8 +11,12 @@ configs:
 #Tools Section
 tools:
 #Developer Mode
-  dev: true
+  dev: false
 #Hub/Lobby Section
 hub:
 #Lobby Message
   lobby: "&4&lSuccessfully Set The Lobby"
+#Join Message
+  join: "&4&l{player} Joint"
+#Leave Message
+  leave: "&4&l{player} Left"

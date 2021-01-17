@@ -4,7 +4,10 @@ import com.github.xspigot.commands.CommandAdmin;
 import com.github.xspigot.commands.CommandLobby;
 import com.github.xspigot.commands.CommandSetLobby;
 import com.github.xspigot.commands.alt.*;
+import com.github.xspigot.events.JoinEvent;
+import com.github.xspigot.events.LeaveEvent;
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabCompleter;
@@ -30,6 +33,7 @@ public final class XPlay extends JavaPlugin implements Listener {
         plugin = this;
 
         setUpCommands();
+        setUpEvents();
 
         getLogger().log(Level.INFO, "XPLAY");
         getLogger().log(Level.INFO, "From: " + getDescription().getAuthors());
@@ -75,6 +79,10 @@ public final class XPlay extends JavaPlugin implements Listener {
         setUpCommand("lobby", new CommandLobby());
     }
 
+    private void setUpEvents() {
+        this.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
+        this.getServer().getPluginManager().registerEvents(new LeaveEvent(), this);
+    }
 
     private void setUpCommandWithExecutor(String command, CommandExecutor executor, TabCompleter completer) {
         PluginCommand pluginCommand = this.getCommand(command);
@@ -92,6 +100,7 @@ public final class XPlay extends JavaPlugin implements Listener {
             throw new NullPointerException("Command not found: " + command + ".");
         pluginCommand.setExecutor(executor);
     }
+
 
     private boolean setupEconomy() {
         RegisteredServiceProvider<Economy> economy = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
