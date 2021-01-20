@@ -4,13 +4,14 @@ import com.github.xspigot.Utils;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
-public class PAPIJoinEvent implements Listener {
+public class BasicQuitEvent implements Listener {
 
     @EventHandler
-    public void onJoin(PlayerJoinEvent event) {
+    public void onQuit(PlayerQuitEvent event) {
 
-        event.setJoinMessage(Utils.getMessageFromConfigWithPlaceholders("hub.join", event.getPlayer()));
+        event.setQuitMessage(Utils.getMessageFromConfig("hub.leave"));
     }
 
 }
