@@ -4,8 +4,8 @@ import com.github.xspigot.commands.CommandAdmin;
 import com.github.xspigot.commands.CommandLobby;
 import com.github.xspigot.commands.CommandSetLobby;
 import com.github.xspigot.commands.alt.*;
-import com.github.xspigot.events.JoinEvent;
-import com.github.xspigot.events.LeaveEvent;
+import com.github.xspigot.events.BasicJoinEvent;
+import com.github.xspigot.events.PAPIJoinEvent;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
@@ -80,8 +80,14 @@ public final class XPlay extends JavaPlugin implements Listener {
     }
 
     private void setUpEvents() {
-        this.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
-        this.getServer().getPluginManager().registerEvents(new LeaveEvent(), this);
+        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+
+            this.getServer().getPluginManager().registerEvents(new BasicJoinEvent(), this);
+
+        } else {
+
+            this.getServer().getPluginManager().registerEvents(new PAPIJoinEvent(), this);
+        }
     }
 
     private void setUpCommandWithExecutor(String command, CommandExecutor executor, TabCompleter completer) {
