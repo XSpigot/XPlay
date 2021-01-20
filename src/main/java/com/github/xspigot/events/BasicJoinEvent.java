@@ -10,7 +10,7 @@ public class BasicJoinEvent implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
 
-        event.setJoinMessage(Utils.getMessageFromConfig("hub.join"));
+        event.setJoinMessage(Utils.getMessageFromConfigWithBuiltInPlaceholders("hub.join", event.getPlayer()));
     }
 
 }

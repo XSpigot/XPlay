@@ -11,7 +11,7 @@ public class BasicQuitEvent implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
 
-        event.setQuitMessage(Utils.getMessageFromConfig("hub.leave"));
+        event.setQuitMessage(Utils.getMessageFromConfigWithBuiltInPlaceholders("hub.leave", event.getPlayer()));
     }
 
 }
