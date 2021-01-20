@@ -17,6 +17,6 @@ hub:
 #Lobby Message
   lobby: "&4&lSuccessfully Set The Lobby"
 #Join Message
-  join: "&4&l%player% Joint The Game"
+  join: "&4&lA Player Joint The Game"
 #Leave Message
-  leave: "&4&l%player% Left The Game"
+  leave: "&4&lA Player Left The Game"
