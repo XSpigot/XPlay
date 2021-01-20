@@ -17,7 +17,7 @@ public class LeaveEvent implements Listener {
 
         } else {
 
-            event.setQuitMessage(Utils.getMessageFromConfigWithBuiltInPlaceholders("hub.leave", event.getPlayer()));
+            event.setQuitMessage(Utils.getMessageFromConfig("hub.leave"));
 
         }
 

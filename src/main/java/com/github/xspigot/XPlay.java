@@ -101,7 +101,6 @@ public final class XPlay extends JavaPlugin implements Listener {
         pluginCommand.setExecutor(executor);
     }
 
-
     private boolean setupEconomy() {
         RegisteredServiceProvider<Economy> economy = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
         if (economy != null) {

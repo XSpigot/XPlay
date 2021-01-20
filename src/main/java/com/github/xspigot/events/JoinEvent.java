@@ -17,7 +17,7 @@ public class JoinEvent implements Listener {
 
         } else {
 
-            event.setJoinMessage(Utils.getMessageFromConfigWithBuiltInPlaceholders("hub.join", event.getPlayer()));
+            event.setJoinMessage(Utils.getMessageFromConfig("hub.join"));
 
         }
 
