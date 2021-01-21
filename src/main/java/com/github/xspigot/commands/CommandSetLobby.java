@@ -32,6 +32,7 @@ public class CommandSetLobby implements CommandExecutor {
                     player.getServer().getWorld("world").setSpawnLocation(PosX, PosY, PosZ, Angle);
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Utils.getMessageFromConfig("hub.lobby")));
                     return true;
+
                 }
             }
 

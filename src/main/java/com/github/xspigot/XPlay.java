@@ -1,5 +1,6 @@
 package com.github.xspigot;
 
+import com.github.xspigot.api.SetLobbyAPI;
 import com.github.xspigot.commands.CommandAdmin;
 import com.github.xspigot.commands.CommandLobby;
 import com.github.xspigot.commands.CommandSetLobby;
@@ -26,6 +27,7 @@ import java.util.logging.Level;
 public final class XPlay extends JavaPlugin implements Listener {
 
     public static XPlay plugin;
+    public SetLobbyAPI lobbyapi;
     public Economy eco;
 
     public boolean developer = false;
@@ -33,6 +35,7 @@ public final class XPlay extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
+        lobbyapi = new SetLobbyAPI();
         plugin = this;
 
         setUpCommands();
@@ -83,6 +86,7 @@ public final class XPlay extends JavaPlugin implements Listener {
     }
 
     private void setUpEvents() {
+
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
 
             this.getServer().getPluginManager().registerEvents(new BasicJoinEvent(), this);
