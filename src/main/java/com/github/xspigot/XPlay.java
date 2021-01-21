@@ -1,6 +1,5 @@
 package com.github.xspigot;
 
-import com.github.xspigot.api.onLobbyEvents;
 import com.github.xspigot.commands.CommandAdmin;
 import com.github.xspigot.commands.CommandLobby;
 import com.github.xspigot.commands.CommandSetLobby;
@@ -26,7 +25,6 @@ import java.util.logging.Level;
 
 public final class XPlay extends JavaPlugin implements Listener {
 
-    public onLobbyEvents lobbyAPI;
     public static XPlay plugin;
     public Economy eco;
 
@@ -34,7 +32,6 @@ public final class XPlay extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        lobbyAPI = new onLobbyEvents();
         this.saveDefaultConfig();
         plugin = this;
 
