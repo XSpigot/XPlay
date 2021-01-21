@@ -1,7 +1,5 @@
 package com.github.xspigot.api;
 
-import com.github.xspigot.Utils;
-import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
