@@ -2,7 +2,6 @@ package com.github.xspigot.commands;
 
 import com.github.xspigot.Utils;
 import com.github.xspigot.XPlay;
-import com.github.xspigot.api.onLobbyEvents;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
