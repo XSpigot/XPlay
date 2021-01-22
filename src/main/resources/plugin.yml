@@ -5,7 +5,7 @@ api-version: 1.16
 authors: [EpicGamer73]
 description: The All-In-One Minecraft Plugin
 depend: [Vault]
-softdepend: [PlaceholderAPI, WorldEdit, ProtocolLib, ViaVersion, PlotSquared]
+softdepend: [PlaceholderAPI, WorldEdit]
 website: https://xspigotmc.gitbook.io/
 commands:
   xplay:

@@ -16,6 +16,8 @@ tools:
 hub:
 #Lobby Message
   lobby: "&4&lSuccessfully Set The Lobby"
+#Teleport The Player On Join
+  teleportonjoin: true
 #Join Message
   join: "&4&lA Player Joint The Game"
 #Leave Message
