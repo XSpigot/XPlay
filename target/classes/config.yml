@@ -1,0 +1,34 @@
+#Errors Section
+errors:
+  #No Permission Message
+  permission: "&4&lNo Permission"
+  #Only Players Message
+  consolerestrict: "&4&lOnly Players Can Execute This Command"
+#Configuration Section
+configs:
+#Reload Config Message
+  reload: "&4&lReloaded Config"
+#Tools Section
+tools:
+#Developer Mode
+  dev: false
+#Hub/Lobby Section
+hub:
+#Lobby Message
+  lobby: "&4&lSuccessfully Set The Lobby"
+#Teleport The Player On Join
+  teleportonjoin: true
+#Join Message
+  join: "&4&lA Player Joint The Game"
+#Leave Message
+  leave: "&4&lA Player Left The Game"
+#Admin Section
+admin:
+#Message When Put In Gamemode Creative
+  gamemodecreative: "&4&lNow In Creative Mode"
+#Message When Put In Gamemode Adventure
+  gamemodeadventure: "&4&lNow In Adventure Mode"
+#Message When Put In Gamemode Survival
+  gamemodesurvival: "&4&lNow In Survival Mode"
+#Message When Put In Gamemode Spectator
+  gamemodespectator: "&4&lNow In Spectator Mode"
