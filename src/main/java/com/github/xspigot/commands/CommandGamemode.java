@@ -17,7 +17,7 @@ import java.util.List;
 
 public class CommandGamemode implements CommandExecutor, TabCompleter {
 
-    private final List<String> arguments = Arrays.asList("reload", "help", "dev", "vault", "gui");
+    private final List<String> arguments = Arrays.asList("creative", "adventure", "survival", "spectator");
     private final XPlay plugin = XPlay.plugin;
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
