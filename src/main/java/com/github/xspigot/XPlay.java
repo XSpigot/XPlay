@@ -9,7 +9,9 @@ import com.github.xspigot.events.BasicJoinEvent;
 import com.github.xspigot.events.BasicQuitEvent;
 import com.github.xspigot.events.PAPIJoinEvent;
 import com.github.xspigot.events.PAPIQuitEvent;
+import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
+import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
@@ -28,7 +30,9 @@ public final class XPlay extends JavaPlugin implements Listener {
 
     public static XPlay plugin;
     public SetLobbyAPI lobbyapi;
-    public Economy eco;
+    private static Economy econ = null;
+    private static Permission perms = null;
+    private static Chat chat = null;
 
     public boolean developer = false;
 
@@ -57,10 +61,13 @@ public final class XPlay extends JavaPlugin implements Listener {
         }
 
         if (!setupEconomy()) {
-            getLogger().log(Level.SEVERE, "No Economy Plugin Found");
+            getLogger().log(Level.SEVERE, "Vault Is Not Installed - Install Vault And Restart The Server");
             getLogger().log(Level.INFO, "If This Error Persists, Check If Vault Is Correctly Installed");
-            boolean eco = false;
+            getServer().getPluginManager().disablePlugin(this);
         }
+
+        setupPermissions();
+        setupChat();
 
     }
 
@@ -117,11 +124,39 @@ public final class XPlay extends JavaPlugin implements Listener {
     }
 
     private boolean setupEconomy() {
-        RegisteredServiceProvider<Economy> economy = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
-        if (economy != null) {
-            eco = economy.getProvider();
-            boolean eco = true;
+        if (getServer().getPluginManager().getPlugin("Vault") == null) {
+            return false;
         }
-        return (eco != null);
+        RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+        if (rsp == null) {
+            return false;
+        }
+        econ = rsp.getProvider();
+        return econ != null;
     }
+
+    private boolean setupChat() {
+        RegisteredServiceProvider<Chat> rsp = getServer().getServicesManager().getRegistration(Chat.class);
+        chat = rsp.getProvider();
+        return chat != null;
+    }
+
+    private boolean setupPermissions() {
+        RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
+        perms = rsp.getProvider();
+        return perms != null;
+    }
+
+    public static Economy getEconomy() {
+        return econ;
+    }
+
+    public static Permission getPermissions() {
+        return perms;
+    }
+
+    public static Chat getChat() {
+        return chat;
+    }
+
 }
