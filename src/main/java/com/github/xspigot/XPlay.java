@@ -9,6 +9,7 @@ import com.github.xspigot.events.BasicJoinEvent;
 import com.github.xspigot.events.BasicQuitEvent;
 import com.github.xspigot.events.PAPIJoinEvent;
 import com.github.xspigot.events.PAPIQuitEvent;
+import me.clip.placeholderapi.updatechecker.UpdateChecker;
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -21,6 +22,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 //CONTRIBUTORS
 //EPICGAMER73
@@ -39,6 +41,7 @@ public final class XPlay extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
+        Logger logger = this.getLogger();
         lobbyapi = new SetLobbyAPI();
         plugin = this;
 
@@ -59,6 +62,14 @@ public final class XPlay extends JavaPlugin implements Listener {
             getLogger().log(Level.WARNING, "Running Snapshot [DEV RELEASE]");
             getLogger().log(Level.WARNING, "Developer Releases Are Not Stable - Use At Your Own Risk");
         }
+
+        new UpdateCheck(this, 87463).getVersion(version -> {
+            if (!(this.getDescription().getVersion().equalsIgnoreCase(version))) {
+                getLogger().log(Level.INFO, "A New Update For XPlay Is Avaliable!");
+                getLogger().log(Level.INFO, "Make Sure To Download It As Soon As Possible");
+                getLogger().log(Level.INFO, "https://www.spigotmc.org/resources/87463/");
+            }
+        });
 
         if (!setupEconomy()) {
             getLogger().log(Level.SEVERE, "Vault Is Not Installed - Install Vault And Restart The Server");
