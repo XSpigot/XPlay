@@ -1,9 +1,9 @@
-package com.github.xspigot.api;
+package com.github.xspigot;
 
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
-public class SetLobbyAPI {
+public class XAPI {
 
     //API To Set The Lobby With Coordinates
     public void setLobbyWithCoordinates(Integer posx, Integer posy, Integer posz, Float yaw, World world) {

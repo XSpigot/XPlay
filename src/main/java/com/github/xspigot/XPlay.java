@@ -1,6 +1,5 @@
 package com.github.xspigot;
 
-import com.github.xspigot.api.SetLobbyAPI;
 import com.github.xspigot.commands.CommandAdmin;
 import com.github.xspigot.commands.CommandGamemode;
 import com.github.xspigot.commands.CommandLobby;
@@ -10,8 +9,6 @@ import com.github.xspigot.events.BasicJoinEvent;
 import com.github.xspigot.events.BasicQuitEvent;
 import com.github.xspigot.events.PAPIJoinEvent;
 import com.github.xspigot.events.PAPIQuitEvent;
-import me.clip.placeholderapi.updatechecker.UpdateChecker;
-import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
 import org.bukkit.Bukkit;
@@ -32,10 +29,9 @@ import java.util.logging.Logger;
 public final class XPlay extends JavaPlugin implements Listener {
 
     public static XPlay plugin;
-    public SetLobbyAPI lobbyapi;
+    public XAPI api;
     private static Economy econ = null;
     private static Permission perms = null;
-    private static Chat chat = null;
 
     public boolean developer = false;
 
@@ -43,7 +39,7 @@ public final class XPlay extends JavaPlugin implements Listener {
     public void onEnable() {
         this.saveDefaultConfig();
         Logger logger = this.getLogger();
-        lobbyapi = new SetLobbyAPI();
+        api = new XAPI();
         plugin = this;
 
         setUpCommands();
@@ -162,8 +158,5 @@ public final class XPlay extends JavaPlugin implements Listener {
         return perms;
     }
 
-    public static Chat getChat() {
-        return chat;
-    }
 
 }
