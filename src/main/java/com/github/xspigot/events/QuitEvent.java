@@ -6,12 +6,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-public class BasicQuitEvent implements Listener {
+public class QuitEvent implements Listener {
 
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
 
-        event.setQuitMessage(Utils.getMessageFromConfigWithBuiltInPlaceholders("hub.leave", event.getPlayer()));
+        event.setQuitMessage(Utils.getMessageFromConfigWithPlaceholders("hub.leave", event.getPlayer()));
     }
 
 }

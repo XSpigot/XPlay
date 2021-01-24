@@ -5,13 +5,10 @@ import com.github.xspigot.commands.CommandGamemode;
 import com.github.xspigot.commands.CommandLobby;
 import com.github.xspigot.commands.CommandSetLobby;
 import com.github.xspigot.commands.alt.*;
-import com.github.xspigot.events.BasicJoinEvent;
-import com.github.xspigot.events.BasicQuitEvent;
-import com.github.xspigot.events.PAPIJoinEvent;
-import com.github.xspigot.events.PAPIQuitEvent;
+import com.github.xspigot.events.JoinEvent;
+import com.github.xspigot.events.QuitEvent;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
-import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.TabCompleter;
@@ -103,16 +100,9 @@ public final class XPlay extends JavaPlugin implements Listener {
 
     private void setUpEvents() {
 
-        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            this.getServer().getPluginManager().registerEvents(new JoinEvent(), this);
+            this.getServer().getPluginManager().registerEvents(new QuitEvent(), this);
 
-            this.getServer().getPluginManager().registerEvents(new BasicJoinEvent(), this);
-            this.getServer().getPluginManager().registerEvents(new BasicQuitEvent(), this);
-
-        } else {
-
-            this.getServer().getPluginManager().registerEvents(new PAPIJoinEvent(), this);
-            this.getServer().getPluginManager().registerEvents(new PAPIQuitEvent(), this);
-        }
     }
 
     private void setUpCommandWithExecutor(String command, CommandExecutor executor, TabCompleter completer) {

@@ -5,6 +5,18 @@ import org.bukkit.entity.Player;
 
 public class XAPI {
 
+    private final XPlay plugin = XPlay.plugin;
+
+    //Plugin Information Section
+
+    //Get Version
+    public String getVersion() {
+        return plugin.getDescription().getVersion();
+    }
+
+
+    //Plugin Ease Of Use Library API
+
     //API To Set The Lobby With Coordinates
     public void setLobbyWithCoordinates(Integer posx, Integer posy, Integer posz, Float yaw, World world) {
 
