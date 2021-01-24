@@ -2,6 +2,7 @@ package com.github.xspigot;
 
 import com.github.xspigot.api.SetLobbyAPI;
 import com.github.xspigot.commands.CommandAdmin;
+import com.github.xspigot.commands.CommandGamemode;
 import com.github.xspigot.commands.CommandLobby;
 import com.github.xspigot.commands.CommandSetLobby;
 import com.github.xspigot.commands.alt.*;
@@ -93,7 +94,9 @@ public final class XPlay extends JavaPlugin implements Listener {
 
     private void setUpCommands() {
         CommandAdmin adminCommand = new CommandAdmin();
+        CommandGamemode gamemodeCommand = new CommandGamemode();
         setUpCommandWithExecutor("xplay", adminCommand, adminCommand);
+        setUpCommandWithExecutor("gm", gamemodeCommand, gamemodeCommand);
         setUpCommand("setlobby", new CommandSetLobby());
         setUpCommand("xdev", new CommandAdminDev());
         setUpCommand("xhelp", new CommandAdminHelp());

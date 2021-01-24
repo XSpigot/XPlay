@@ -32,3 +32,6 @@ commands:
   lobby:
     description: "Teleport To Lobby {no permission}"
     default: true
+  gm:
+    description: "Switch Gamemode {xplay.gamemode}"
+    default: op

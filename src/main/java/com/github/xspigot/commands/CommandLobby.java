@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 public class CommandLobby implements CommandExecutor {
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (label.equalsIgnoreCase("lobby")) {
 
             if (!(sender instanceof Player)) {
 
@@ -19,7 +18,6 @@ public class CommandLobby implements CommandExecutor {
             }
 
             ((Player) sender).teleport(Bukkit.getWorld("world").getSpawnLocation());
-        }
 
         return true;
     }
