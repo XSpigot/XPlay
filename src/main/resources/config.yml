@@ -31,4 +31,4 @@ admin:
 #Message When Put In Gamemode Survival
   gamemodesurvival: "&4&lNow In Survival Mode"
 #Message When Put In Gamemode Spectator
-    gamemodespectator: "&4&lNow In Spectator Mode"
+  gamemodespectator: "&4&lNow In Spectator Mode"

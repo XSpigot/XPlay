@@ -79,7 +79,6 @@ public final class XPlay extends JavaPlugin implements Listener {
         }
 
         setupPermissions();
-        setupChat();
 
     }
 
@@ -147,12 +146,6 @@ public final class XPlay extends JavaPlugin implements Listener {
         }
         econ = rsp.getProvider();
         return econ != null;
-    }
-
-    private boolean setupChat() {
-        RegisteredServiceProvider<Chat> rsp = getServer().getServicesManager().getRegistration(Chat.class);
-        chat = rsp.getProvider();
-        return chat != null;
     }
 
     private boolean setupPermissions() {

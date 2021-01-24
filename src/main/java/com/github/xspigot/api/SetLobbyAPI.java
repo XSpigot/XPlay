@@ -10,6 +10,8 @@ public class SetLobbyAPI {
 
         world.setSpawnLocation(posx, posy, posz, yaw);
 
+        return;
+
     }
 
     //API To Set The Lobby At The Player's Location
@@ -21,6 +23,8 @@ public class SetLobbyAPI {
         int Angle = (int) player.getLocation().getYaw();
 
         player.getServer().getWorld(String.valueOf(world)).setSpawnLocation(PosX, PosY, PosZ, Angle);
+
+        return;
 
     }
 
