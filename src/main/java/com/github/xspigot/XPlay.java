@@ -66,9 +66,9 @@ public final class XPlay extends JavaPlugin implements Listener {
 
         new UpdateCheck(this, 87463).getVersion(version -> {
             if (!(this.getDescription().getVersion().equalsIgnoreCase(version))) {
-                getLogger().log(Level.INFO, "A New Update For XPlay Is Avaliable!");
-                getLogger().log(Level.INFO, "Make Sure To Download It As Soon As Possible");
-                getLogger().log(Level.INFO, "https://www.spigotmc.org/resources/87463/");
+                getLogger().log(Level.WARNING, "A New Update For XPlay Is Avaliable!");
+                getLogger().log(Level.WARNING, "Make Sure To Download It As Soon As Possible");
+                getLogger().log(Level.WARNING, "https://www.spigotmc.org/resources/87463/");
             }
         });
 
