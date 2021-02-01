@@ -20,9 +20,9 @@ hub:
 #Teleport The Player On Join
   teleportonjoin: true
 #Join Message
-  join: "&4&lA Player Joint The Game"
+  join: "&4&l%player_name% Joint The Game"
 #Leave Message
-  leave: "&4&lA Player Left The Game"
+  leave: "&4&l%player_name% Left The Game"
 #Admin Section
 admin:
 #Message When Put In Gamemode Creative
